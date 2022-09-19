@@ -185,7 +185,7 @@ main {
 ._pfp-picture-and-name {
   display: flex;
   align-items: center;
-  gap: 8%;
+  gap: 1.5em;
   margin-bottom: 1.5em;
 }
 ._pfp-picture-and-name h1 {
