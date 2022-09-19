@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url(bg-pattern-top-mobile.svg), url(bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% bottom;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  body {
+    min-height: 100vh;
+    background: url(bg-pattern-top-desktop.svg), url(bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% bottom;
+    background-size: 42%, 85%;
+  }
+}
+
+main {
+  padding: 5em 1em;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  main {
+    padding: 6em 10em 10em 10em;
+    max-width: 77em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.page__title-and-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .page__title-and-description {
+    text-align: start;
+  }
+}
+.page__title-and-description h1 {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 2.5rem;
+  line-height: 0.8em;
+  margin-bottom: 0.8em;
+}
+@media (min-width: 1200px) {
+  .page__title-and-description h1 {
+    padding-right: 4em;
+    font-size: 3rem;
+  }
+}
+.page__title-and-description p {
+  color: hsl(303deg, 10%, 53%);
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 2.5em;
+  padding: 0 0.4em;
+}
+@media (min-width: 1200px) {
+  .page__title-and-description p {
+    padding-right: 6em;
+  }
+}
+
+.star__rating {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 3.5em;
+}
+@media (min-width: 1200px) {
+  .star__rating {
+    justify-content: flex-end;
+  }
+}
+.star__rating span {
+  display: flex;
+  gap: 0.5em;
+}
+@media (min-width: 1200px) {
+  .star__rating span {
+    gap: 0.3em;
+  }
+}
+
+.rating_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 0.8em;
+  padding: 0.9em 0;
+  background-color: hsl(300deg, 24%, 96%);
+  font-size: 18px;
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .rating_container {
+    flex-direction: row;
+    width: 70%;
+    padding: 0.8em 1.8em;
+    gap: 1.5em;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review {
+    position: relative;
+  }
+}
+
+@media (min-width: 1200px) {
+  .report {
+    position: relative;
+    left: 9%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .best-tech {
+    position: relative;
+    left: 18%;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media (min-width: 1200px) {
+  .reviews {
+    grid-column: 1/span 2;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .reviews .first {
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews .second {
+    position: relative;
+    top: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews .third {
+    position: relative;
+    top: 20%;
+  }
+}
+.reviews .review_container {
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 10px;
+  padding: 2.5em 1.8em;
+}
+.reviews q {
+  font-size: 18px;
+  color: hsl(300deg, 24%, 96%);
+}
+@media (min-width: 1200px) {
+  .reviews q {
+    font-size: 16.2px;
+  }
+}
+
+._pfp-picture-and-name {
+  display: flex;
+  align-items: center;
+  gap: 8%;
+  margin-bottom: 1.5em;
+}
+._pfp-picture-and-name h1 {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+._pfp-picture-and-name p {
+  font-size: 1rem;
+  color: hsl(333deg, 80%, 67%);
+}
+._pfp-picture-and-name .pfp-picture-container {
+  width: 2.5em;
+}
+._pfp-picture-and-name .pfp-picture-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+@media (min-width: 1200px) {
+  footer {
+    position: absolute;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

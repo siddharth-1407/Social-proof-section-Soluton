@@ -1,0 +1,234 @@
+$mycolors: (
+    Very-Dark-Magenta: hsl(300, 43%, 22%),
+    Soft-Pink: hsl(333, 80%, 67%),
+    Dark-Grayish-Magenta: hsl(303, 10%, 53%),
+    Light-Grayish-Magenta: hsl(300, 24%, 96%),
+    White: hsl(0, 0%, 100%)
+);
+$desktop: 1200px;
+@mixin desktop{
+  @media(min-width: #{$desktop}){
+    @content
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+    background: url(bg-pattern-top-mobile.svg), url(bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% bottom;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop{
+    min-height: 100vh;
+    background: url(bg-pattern-top-desktop.svg), url(bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% bottom;
+    background-size: 42%, 85%;
+    }
+}
+
+main {
+    padding: 5em 1em;
+    position: relative;
+
+    @include desktop{
+     padding: 6em 10em 10em 10em;  
+     max-width: 77em; 
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+.page__title-and-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include desktop{
+          text-align: start;
+    }
+
+    h1 {
+        color: map-get($mycolors, Very-Dark-Magenta);
+        font-size: 2.5rem;
+        line-height: 0.8em;
+        margin-bottom: 0.8em;
+
+        @include desktop{
+        padding-right: 4em;
+        font-size: 3rem;
+        }
+    }
+
+    p {
+        color: map-get($mycolors, Dark-Grayish-Magenta);
+        font-size: 18px;
+        line-height: 1.5em;
+        margin-bottom: 2.5em;
+        padding: 0 0.4em;
+
+        @include desktop{
+        padding-right: 6em;
+        }
+    }
+}
+
+.star__rating {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 3.5em;
+    @include desktop{
+    justify-content: flex-end; 
+    }
+
+    span {
+        display: flex;
+        gap: 0.5em;
+
+        @include desktop{
+        gap: 0.3em;
+        }
+    }
+}
+
+.rating_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    gap: 0.8em;
+    padding: 0.9em 0;
+    background-color: map-get($mycolors, Light-Grayish-Magenta);
+    font-size: 18px;
+    color: map-get($mycolors, Very-Dark-Magenta);
+    font-weight: 700;
+
+    @include desktop{
+        flex-direction: row;
+        width: 70%;
+        padding: 0.8em 1.8em;
+        gap: 1.5em;
+        font-size: 18px; 
+    }
+}
+.review{
+    @include desktop{
+    position: relative;    
+}
+}
+.report{
+    @include desktop{
+     position: relative;
+     left: 9%;   
+    }
+}
+.best-tech{
+    @include desktop{
+     position: relative;
+     left: 18%;   
+    }
+}
+
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    @include desktop{
+        grid-column: 1/span 2;
+        flex-direction: row;
+        gap: 2em;
+        
+    }
+
+    .first{
+        @include desktop{
+            @include desktop{
+                position: relative;
+            }
+        }
+    }
+    .second{
+        @include desktop{
+            position: relative;
+            top: 10%;        
+        }
+    }
+    .third{
+        @include desktop{
+            position: relative;
+            top: 20%
+        }
+    }
+    .review_container {
+        background-color: map-get($mycolors, Very-Dark-Magenta);
+        border-radius: 10px;
+        padding: 2.5em 1.8em;
+    }
+    q{
+        font-size: 18px;
+        color: map-get($mycolors, Light-Grayish-Magenta);
+
+        @include desktop{
+          font-size: 16.2px;
+        }
+    }
+}
+
+._pfp-picture-and-name {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    margin-bottom: 1.5em;
+
+    h1{
+        font-size: 1rem;
+        color: map-get($mycolors, White );
+    }
+    p{
+        font-size: 1rem;
+        color: map-get($mycolors, Soft-Pink);
+    }
+
+    .pfp-picture-container{
+        width: 2.5em;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+}
+footer{
+    position: relative;
+    bottom: 0;
+    @include desktop{
+     position: absolute;   
+    }
+}
+.attribution {
+    font-size: 11px;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
