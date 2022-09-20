@@ -31,7 +31,7 @@ main {
 @media (min-width: 1200px) {
   main {
     padding: 6em 10em 10em 10em;
-    max-width: 77em;
+    max-width: 67.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
